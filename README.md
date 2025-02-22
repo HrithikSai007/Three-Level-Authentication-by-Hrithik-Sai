@@ -1,5 +1,9 @@
 # Three-Level-Authentication-by-Hrithik-Sai
 
+First Download: THREE_LOCK.rar all the content is in that make sure You read Readme file to get to know about the System and then contiune working on this Program 
+this System uses java in Netbeans and for database it uses MYsql for connection we are using Xmapp. 
+
+
 ABSTRACT: 
 Three-level password authentication is a robust security mechanism designed to enhance access 
 control and protect sensitive information. This authentication system involves three distinct layers 
