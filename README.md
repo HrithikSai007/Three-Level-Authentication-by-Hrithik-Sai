@@ -53,7 +53,8 @@ Level 3: Image Registration and Authentication:
 2.3. If image parts match, the user gains access. 
 2.4. If image parts do not match, access is denied. 
  
-9.  IMPLEMENTATION AND DESCRIPTION: 
+IMPLEMENTATION AND DESCRIPTION:
+
 The authentication system comprises three modules. The first involves username/password registration 
 and login. The second introduces pattern-based authentication, and the third adds image-based 
 authentication, combining to create a secure, multi-layered access control mechanism 
@@ -76,65 +77,42 @@ Subsequently, during login, the system prompts users to correctly select the pre
 patterns to gain access.  
  During the registration process, users select three patterns, with the system storing these choices for 
 later authentication.  
- 
- 
 Upon login, users are presented with the registered pattern sequence and must select the correct patterns 
 in the correct order. Access is granted if the selected patterns match the registered ones. 
+
 Module 3: Image Registration and Authentication (Level 3) 
+
 This module adds a third layer of authentication by incorporating image registration.In the registration 
 process, users upload an image, and the system divides it into nine parts. Users choose and register 
 three specific parts 
- 
- 
 During login, users are presented with the divided image and must select the exact three parts to gain 
 access.The system displays the divided image, and users must correctly select the same three parts they 
 registered.  
 Access is granted if the selected image parts match the registered ones. 
  
 Performance Metrics and Run results  
+
 This system adopts a multi-level authentication approach to bolster security. Users register and log in 
 using credentials (username/password), authenticate through alternately selected patterns, and further 
 fortify security by choosing specific parts of a registered image during login. The layered 
 authentication system ensures robust protection against unauthorized access. 
  Performance Metrics:  
+ 
 1. Execution Time: - Breaking down the execution time of subcomponents. 
 Database Queries (Level 1): 0.5s 
 Pattern Recognition (Level 2): 1.5s 
 Image Processing (Level 3): 2s 
 UI Rendering: 0.2s 
- 
- 
+
 2. Throughput:  
 Average Throughput: 200 authentications/min  
 Peak Throughput: 500 authentications/min 
+
 3. Scalability: Assessing how well the system scales with a growing user base. Evaluate the impact 
 of adding additional servers or resources on overall performance.  
 Concurrent Users: 500 users (<1s delay) initially; 1000 users (<0.5s delay) with scaling. 
+
 4. Error Rates:  
 User Input Errors: 5% 
 System Errors: 0.2% 
-Run Results: 
-1. Successful Authentications: successful authentications by user type to identify if different user 
-groups have distinct patterns of system usage. 
-Level 1 Success Rate: 98% 
-Level 2 Success Rate: 94% 
-Level 3 Success Rate: 96% 
-Overall Success Rate: 88% (all three levels combined) 
-2. False Rejection Rate (FRR):The percentage of valid users incorrectly rejected by the system. 
-Level 1 FRR: 2% 
-Level 2 FRR: 6% 
-Level 3 FRR: 10% 
-Overall FRR: 6% 
-3. False Acceptance Rate (FAR) :The percentage of unauthorized users incorrectly accepted by the 
-system. 
-Level 1 FAR: 1% 
-Level 2 FAR: 0.4% 
-Level 3 FAR: 0.1% 
-Overall FAR: 0.5% 
- 
-4. Response Time: response time during peak usage periods and low-traffic times to identify any 
-variations in system performance. 
-Level 1 Time: 1-2 second 
-Level 2 Time: 2-3 seconds 
-Level 3 Time: 2-3 seconds 
-Total Average Time: 4-8 seconds per authentication session
+
